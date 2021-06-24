@@ -424,13 +424,19 @@ footer{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         margin-bottom: 4rem;
         padding-top: 6vw;
 
         .project{
+            position: relative;
             width: clamp(14.25rem, 29vw, 33.5rem);
+            height: clamp(19.75rem, 41vw, 29.5rem);
             margin-top: 2rem;
+
+            h4{
+                margin-top: 0;
+            }
 
             .project-text-container{
 
@@ -439,6 +445,13 @@ footer{
                     font-size: clamp(.875rem, 2vw, 1rem);
                     text-align: left;
                 }
+            }
+
+            .project-tech-container{
+                position: absolute;
+                bottom: 0;
+                height: auto;
+                align-self: flex-end;
             }
         }
     }

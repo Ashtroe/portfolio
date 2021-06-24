@@ -493,20 +493,32 @@ footer .links-container #linkedin-link {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     margin-bottom: 4rem;
     padding-top: 6vw;
   }
   .works-container .project {
+    position: relative;
     width: clamp(14.25rem, 29vw, 33.5rem);
+    height: clamp(19.75rem, 41vw, 29.5rem);
     margin-top: 2rem;
+  }
+  .works-container .project h4 {
+    margin-top: 0;
   }
   .works-container .project .project-text-container p {
     margin-left: 2%;
     font-size: clamp(0.875rem, 2vw, 1rem);
     text-align: left;
+  }
+  .works-container .project .project-tech-container {
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
 }
 /*# sourceMappingURL=styles.css.map */
