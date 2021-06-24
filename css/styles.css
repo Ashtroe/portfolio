@@ -78,6 +78,9 @@ body {
   height: 100%;
   background-color: #4e6ebb;
   border-radius: 50%;
+  box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.2);
 }
 
 .about-container .header-text-container {
@@ -165,6 +168,9 @@ body {
       flex-wrap: wrap;
   background-color: #E9E9E9;
   border-radius: .75rem;
+  box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.2);
 }
 
 .skills-container h4 {
