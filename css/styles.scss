@@ -1,0 +1,444 @@
+$background: #F1F1F1;
+$primaryColor: #4e6ebb;
+$secondary: #303030;
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif; 
+  }
+
+body{
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $background;
+}  
+
+
+
+.background-text{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    margin:0;
+    font-size: clamp(4.5rem, 17vw, 15.25rem);
+    color: #E2E5EC;
+    perspective: 1px;
+    transform: translateZ(-1px);
+}
+
+
+
+
+
+.about-container{
+    position: relative;
+    width: clamp(1rem, 100vw, 60.625rem);
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+
+    .logo-container{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: clamp(8.625rem, 33vw, 21.75rem);
+        height: clamp(8.625rem, 33vw, 21.75rem);
+        margin-top: clamp(2.25rem, 14vw, 10rem);
+        
+
+        img{
+            position: relative;
+            z-index: 2;
+            width: 75%;
+            height: 75%;
+        }
+
+        .logo-background{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: $primaryColor;
+            border-radius: 50%;
+        }
+    }
+
+    .header-text-container{
+        width: clamp(8.625rem, 33vw, 21.75rem);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h2{
+            font-size: clamp(1.5rem, 5.8vw, 4.75rem);
+            text-align: center;
+
+            span{
+                margin: 0;
+                font-size: clamp(2.625rem, 175%, 7.75rem);
+                color: $primaryColor;
+            }
+        }
+
+    }
+
+    p{
+        width: clamp(18.875rem, 73%, 58rem);
+        text-align: center;
+        margin-top: 0;
+    }
+
+    a{
+        font-size: clamp(1rem, 3.8vw, 1.5rem);
+        font-weight: 600;
+        position: relative;
+        text-decoration: none;
+        color: $secondary;
+        overflow: hidden;
+    
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: $primaryColor;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+    
+        &:hover::after{
+            transform: scaleX(1);
+      transform-origin: bottom left;
+        }
+    }
+}
+
+.skills-container{
+    width: clamp(18.875rem, 73%, 68rem);
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #E9E9E9;
+    border-radius: .75rem;
+
+    
+
+    h4{
+        margin: .625rem 0;
+        font-size: clamp(1.125rem, 4vw, 1.5rem);
+        font-weight: 600;
+    }
+
+    .logos{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 1rem;
+
+        img{
+            width: clamp(2.75rem, 9vw, 8rem);
+            height: clamp(2.75rem, 9vw, 8rem);
+            margin: .75rem;
+
+            &:nth-of-type(4){
+                margin-right: 0;
+            }
+            &:nth-of-type(8){
+                margin-right: 0;
+            }
+            
+        }
+    }
+}
+
+.works-container{
+    position: relative;
+    width: clamp(1rem, 100vw, 60.625rem);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .project{
+        width: clamp(18.75rem, 72%, 33.5rem);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: clamp(2rem, 12vw, 10rem) 0 clamp(3.75rem, 14.5vw, 4.375rem) 0;
+
+        .project-screenshot{
+            position: relative;
+            width: 100%;
+            border-radius: 1.5rem;
+            
+            &:hover{
+                cursor: pointer;
+
+            }
+
+            &::before{
+                content: '';
+                display: block;
+                padding-top: 56.25%;
+            }
+
+            &::after{
+                position: absolute;
+                z-index: -1;
+                top: 3px;
+                left: 3px;
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: $secondary;
+                border-radius: 1.5rem;
+                
+            }
+
+            &:hover::after{
+                top: 8px;
+                left: 8px;
+                background-color: $primaryColor;
+            }
+
+            
+        }
+
+        .project-text-container{
+            width: 100%;
+
+            p{
+                text-align: center;
+                font-size: clamp(.625rem, 3vw, 1rem);
+                line-height: 1.125rem;
+            }
+        }
+
+        .project-tech-container{
+            position: relative;
+            width: 100%;
+            height: 1.5rem;
+            display: flex;
+            align-items: center;
+
+            img{
+                width: clamp(1.5rem, 8%, 2rem);
+                margin-left: clamp(.625rem, 2.4vw, 1rem);
+
+                &::after{
+                    content: '';
+                    display: block;
+                    padding-top: 100%;
+                }
+            }
+
+            a{
+                position: absolute;
+                right: 0;
+            }
+
+            a{
+                position: absolute;
+                right: 0;
+                font-size: clamp(.625rem, 1vw, 1.5rem);
+                font-weight: 600;
+                text-decoration: none;
+                color: $secondary;
+                overflow: hidden;
+            
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: $primaryColor;
+                    transform-origin: bottom right;
+                    transition: transform 0.25s ease-out;
+                }
+            
+                &:hover::after{
+                    transform: scaleX(1);
+              transform-origin: bottom left;
+                }
+            }
+
+            
+
+        }
+
+        #playd-screenshot{
+            background-image: url(/img/screenshot/playd-desktop.png);
+            background-position: center;
+            background-size: cover;
+        }
+        #portfolio-screenshot{
+            background-image: url(/img/screenshot/portfolio-desktop.png);
+            background-position: center;
+            background-size: 110%;
+        }
+        #gust-screenshot{
+            background-image: url(/img/screenshot/gust-desktop.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+    
+}
+
+footer{
+    position: relative;
+    width: 100vw;
+    height: clamp(3rem, 11.6%, 4.625rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .links-container{
+        width: clamp(6.125rem, 27vw, 7rem);
+        height: clamp(1rem, 4vw, 2rem);
+        margin: 1rem;
+        display: flex;
+        align-items: center;
+
+        a{
+            margin-top: 0;
+            width: clamp(1.5rem, 5.8vw, 2rem);
+
+            &::after{
+                content: '';
+                display: block;
+                padding-top: 100%;
+            }
+        }
+
+        #github-link{
+            background-image: url(/img/logos/github.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        #instagram-link{
+            margin: 0 1rem;
+            background-image: url(/img/logos/instagram.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        #linkedin-link{
+            background-image: url(/img/logos/linkedin.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    
+    .about-container{
+        width: clamp(30.5rem, 63vw, 68rem);
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 6vw;
+
+        .background-text{
+            top: clamp(-4.5rem, -9vw, -7.75rem);
+        }
+
+        .logo-container{
+            width: clamp(11.125rem, 23vw, 21.75rem);
+            height: clamp(11.125rem, 23vw, 21.75rem);
+            margin: 0 clamp(2.75rem, 5.7vw, 5.25rem) 0 0;
+            flex-shrink: 0;
+        }
+
+        .header-text-container{
+            width: clamp(14.375rem, 29vw, 28rem);
+
+            h2{
+                font-size: clamp(2.375rem, 5vw, 4.7rem);
+                line-height: clamp(2.5rem, 7vw, 6rem);
+
+                span{
+                    font-size: clamp(4rem, 169%, 7.75rem);
+                }
+            }
+        }
+
+        p{
+            width: 100%;
+            align-self: flex-end;
+            text-align: left;
+            font-size: clamp(1.25rem, 2.6vw, 2.25rem);
+            line-height: clamp(1.5rem, 4vw, 3.5rem);
+            margin: 2vw 0 2vw 2vw;
+        }
+
+        a{
+            font-size: clamp(1rem, 2vw, 1.5rem);
+        }
+    }
+
+    .skills-container{
+        margin-top: 10rem;
+
+        .logos{
+            width: clamp(1rem, 85%, 63rem);
+            justify-content: space-around;
+
+            img{
+                margin: 1rem;  
+                width: clamp(2rem, 4vw, 4.5rem);  
+                height: clamp(2rem, 4vw, 4.5rem);  
+            }
+
+        }
+    }
+
+    .works-container{
+        width: clamp(18.875rem, 63%, 68rem);
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+        padding-top: 6vw;
+
+        .project{
+            width: clamp(14.25rem, 29vw, 33.5rem);
+            margin-top: 2rem;
+
+            .project-text-container{
+
+                p{
+                    margin-left: 2%;
+                    font-size: clamp(.875rem, 2vw, 1rem);
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
