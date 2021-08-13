@@ -352,6 +352,14 @@ body {
   background-size: cover;
 }
 
+.works-container .project #peroose-screenshot {
+  background-image: url(/img/screenshot/peroose-desktop.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: 'white';
+}
+
 .works-container .project #portfolio-screenshot {
   background-image: url(/img/screenshot/portfolio-desktop.png);
   background-position: center;
